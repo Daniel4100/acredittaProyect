@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom'
 const Redireccion = () => {
     const navigate = useNavigate()
     useEffect(() => {
-      navigate('/g')
+      navigate('/galery')
     }, [])
     
   return (
