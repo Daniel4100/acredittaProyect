@@ -11,11 +11,11 @@ const Galery = ({ toggle, handleToggle }) => {
   return (
     <div>
       <div className="form-container">
-        //componente de formulario
+        {/* //componente de formulario */}
         <Form toggle={toggle} handleToggle={handleToggle} />
       </div>
       <div className="photos-container">
-        // desplegamos las fotos
+         {/* desplegamos las fotos */}
         {photos?.length > 0 ? (
           photos?.map((photo, index) => <CardPhoto key={index} photo={photo} />)
         ) : (
