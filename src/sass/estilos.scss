@@ -1,0 +1,159 @@
+@use "scren" as *;
+@use "dashboard" as *;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap");
+
+$color: #115791 ;
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: #303030;
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+.App {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  overflow: hidden;
+  .container {
+    width: 240px;
+    height: 100vh;
+    position: fixed;
+    background-color: rgb(37, 39, 46);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em 0;
+    @media screen and (max-width: 1340px) {
+      position: absolute;
+    }
+    .container-nav {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 1em;
+    }
+    .app-name {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      button{
+        background-color: transparent;
+        border: none;
+        position: absolute;
+        right: .5em;
+        top: -2em;  
+        img{
+          width: 40px;
+          height: 40px;
+        }
+      }
+      span {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #dddddd;
+      }
+      img {
+        width: 100px;
+        height: 100px;
+      }
+      hr {
+        width: 90%;
+        color: #44444454;
+        border-color: rgba(185, 185, 185, 0.267);
+      }
+      
+    }
+  }
+}
+.link {
+  padding: 0.8em 1.7em;
+  width: 200px;
+  text-align: center;
+  text-decoration: none;
+  background-color: transparent;
+  border-radius: 0.3em;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.5s;
+  font-weight: 400;
+  font-size: 17px;
+  border: 1px solid;
+  font-family: inherit;
+  text-transform: uppercase;
+  color: $color;
+  z-index: 1;
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 50px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+    background-color: $color;
+    transition: 1s ease;
+  }
+  &::before {
+    top: -1em;
+    left: -1em;
+  }
+  &::after {
+    left: calc(100% + 1em);
+    top: calc(100% + 1em);
+  }
+  &:hover::before,
+  &:hover::after {
+    height: 410px;
+    width: 410px;
+  }
+  &:hover {
+    color: rgb(10, 25, 30);
+  }
+}
+.active-link {
+  filter: brightness(.8);
+  background-color: $color;
+  color: rgb(219, 223, 224);
+}
+.photos-container {
+  margin-top: 4em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+  gap: 2em;
+  article {
+    width: 300px;
+    height: 300px;
+    border-radius: 1em;
+    overflow: hidden;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.none{
+  transform: translateX(-200px);
+  display: none;
+  
+    
+  }
+
+
+.ajuste{
+  margin-left: 0;
+}

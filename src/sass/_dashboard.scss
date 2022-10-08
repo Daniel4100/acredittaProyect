@@ -1,0 +1,202 @@
+@use "graphic" as *;
+
+.form-container {
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  padding: 1em;
+  form {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+    height: 100%;
+    flex-wrap: wrap;
+    button {
+      padding: 0 1em;
+      background-color: #eff1f5;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      img {
+        height: 38px;
+        
+      }
+    }
+    input {
+      border-radius: 5px;
+      height: 40px;
+      border: none;
+      background-color: #eff1f5;
+      padding: 0 1em;
+    }
+    span {
+      color: rgb(61, 61, 61);
+    }
+  }
+}
+.dashboard {
+  padding: 3em;
+  @media screen and (max-width: 768px) {
+    padding: 1em;
+  }
+    
+  
+  .dashboard-content {
+    display: flex;
+    gap: 10em;
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: center;
+      gap: 2em;
+    }
+    .dashboard-title {
+      padding: 0 1em;
+      background-color: #eff1f51e;
+      box-shadow: 0.5px 0.5px, -0.5px -0.5px;
+      border-radius: 10px;
+      width: 100%;
+      max-width: 300px;
+      height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      h1{
+        @media screen and (max-width: 768px) {
+          font-size: 1.5rem;
+        }
+          
+        }
+      }
+    }
+    .dates {
+      background-color: #eff1f51e;
+      box-shadow: 0.5px 0.5px, -0.5px -0.5px;
+      border-radius: 10px;
+      width: 100%;
+      max-width: 400px;
+      height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      button {
+        padding: 0;
+        background-color: transparent;
+        border: none;
+        img {
+          height: 40px;
+        }
+      }
+      .dates-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        p {
+          font-size: 0.7rem;
+        }
+        span{
+          @media screen and (max-width: 768px) {
+            font-size: 0.8rem;
+          }
+            
+          }
+        }
+      }
+    }
+  
+
+
+.dashboard {
+  .dashboard-objects {
+    display: flex;
+    width: 100%;
+    padding: 2em 0em;
+    background-color: rgba(0, 255, 255, 0);
+    @media screen and (max-width: 1040px) {
+      flex-direction: column;
+    }
+      
+    
+    &__count {
+      width: 30%;
+      display: flex;
+      align-items: center;
+      @media screen and (max-width: 1040px) {
+        width: 100%;
+        justify-content: center;
+      }
+      article {
+        width: 300px;
+        height: 400px;
+        background-color: #eff1f51e;
+        box-shadow: 0.5px 0.5px, -0.5px -0.5px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1em;
+        .circle {
+          width: 200px;
+          height: 200px;
+          background-color: #eff1f51e;
+          box-shadow: 0.5px 0.5px, -0.5px -0.5px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 1em;
+          p {
+            font-size: 2rem;
+            @media screen and (max-width: 768px) {
+              font-size: 2rem;
+            }
+              
+          }
+              
+        }
+      }
+    }
+  
+
+    &__graphic {
+      width: 70%;
+      @media screen and (max-width: 1040px) {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  }
+}
+.dashboard {
+  &-objects-all {
+    width: 100%;
+    background-color: #2727279a;
+    padding: 1em;
+    border-radius: 10px;
+    .item {
+      width: 100%;
+      height: 100px;
+      background-color: #eff1f51e;
+      box-shadow: 0.5px 0.5px, -0.5px -0.5px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 1em;
+      margin-bottom: 1em;
+      span{
+        width: 25%;
+      }
+    }
+    .item-child{
+      width: 100%;
+      height: 80px;
+      display: flex;
+      border-bottom: 1px solid #e6e6e6;
+      align-items: center;
+      padding: 0 1em;
+      span{
+        width: 25%;
+      }
+    }
+  }
+}
