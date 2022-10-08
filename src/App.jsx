@@ -29,7 +29,7 @@ function App() {
           </div>
           <nav className="container-nav">
             <NavLink
-              to="/g"
+              to="/galery"
               className={({ isActive }) =>
                 isActive ? "link active-link" : "link"
               }
@@ -51,7 +51,7 @@ function App() {
       <div className={toggle ? "screen" : "screen ajuste"}>
         <Routes>
           <Route
-            path="/g"
+            path="/galery"
             element={<Galery toggle={toggle} handleToggle={handleToggle} />}
           />
           <Route
