@@ -242,9 +242,7 @@ body {
   padding: 2em 0;
 }
 @media screen and (max-width: 1340px) {
-  .App .container {
-    position: absolute;
-  }
+  
 }
 .App .container .container-nav {
   width: 100%;
