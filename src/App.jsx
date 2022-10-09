@@ -7,7 +7,7 @@ import { useState } from "react";
 
 function App() {
   // toogle es mi useState que me permite mostrar y ocultar la navegacion
-  const [toggle, setToggle] = useState(true);
+  const [toggle, setToggle] = useState(false);
 
 
   // handleToggle es mi funcion que me permite cambiar el estado de mi useState
